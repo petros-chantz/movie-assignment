@@ -11,6 +11,7 @@ const Wrapper = styled.div`
 const Photo = styled.div`
   height: 300px;
   border-radius: 4px;
+  background-color: var(--text-primary) !important;
   background-image: url(${(props) => props.moviePoster});
   background-size: cover;
   background-position: center center;
