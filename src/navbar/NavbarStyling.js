@@ -16,7 +16,7 @@ export const NavbarWrapper = styled.nav`
 
 export const LogoContainer = styled.div`
   padding: 30px;
-
+  background-color: var(--bg-navbar);
   @media screen and (max-width: 425px) {
     padding: 10px;
   }
@@ -27,6 +27,7 @@ export const LogoText = styled.p`
   font-weight: 400;
   letter-spacing: 2px;
   color: var(--text-primary);
+  background-color: var(--bg-navbar);
 
   @media screen and (max-width: 425px) {
     font-size: 1.6rem;
@@ -35,6 +36,7 @@ export const LogoText = styled.p`
 
 export const FormContainer = styled.div`
   padding: 30px;
+  background-color: var(--bg-navbar);
 
   @media screen and (max-width: 425px) {
     padding: 10px;
@@ -44,7 +46,6 @@ export const FormContainer = styled.div`
 export const SearchBar = styled.input`
   background-color: var(--bg-primary);
   border: none;
-  border-radius: 40px;
   padding: 10px 20px;
   width: 250px;
   outline: none;

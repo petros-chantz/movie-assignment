@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import "./App.css";
+import Hero from "./hero/Hero";
 import Navbar from "./navbar/Navbar";
 
 export default function App() {
@@ -7,7 +9,7 @@ export default function App() {
   const [term, setTerm] = useState("");
   const [movies, setMovies] = useState({});
   const [numResults, setNumResults] = useState(0);
-  const [termExists, setTermExists] = useState({});
+  const [termExists, setTermExists] = useState(true);
 
   const API_KEY = process.env.REACT_APP_API_KEY;
   const url = `https://www.omdbapi.com/`;
@@ -25,7 +27,7 @@ export default function App() {
         console.log(data);
         setMovies(data.Search);
         setNumResults(data.totalResults);
-        setTermExists(data.Response[0]);
+        setTermExists(data.Response);
         console.log(termExists);
       })
       .catch((error) => {
@@ -33,11 +35,21 @@ export default function App() {
         console.log(error);
       });
   }
+
   return (
-    <Navbar
-      onFormSubmit={onFormSubmit}
-      onInputChange={onInputChange}
-      term={term}
-    />
+    <>
+      <Navbar
+        onFormSubmit={onFormSubmit}
+        onInputChange={onInputChange}
+        term={term}
+      />
+      <Hero
+        term={term}
+        numResults={numResults}
+        termExists={termExists}
+        movies={movies}
+        isloading={isloading}
+      />
+    </>
   );
 }
