@@ -35,13 +35,16 @@ export default function Hero({
   movies,
   isloading,
 }) {
+  //Capitalizing first character of incoming result
   const capitalizedTerm = term.charAt(0).toUpperCase() + term.slice(1);
 
   return (
     <HeroWrapper>
+      {/* Showcase results only when loading is 'false' */}
       {isloading ? (
         <InitialScreen />
       ) : (
+        // termExists ? show results : show No found page
         <Results
           capitalizedTerm={capitalizedTerm}
           numResults={numResults}
