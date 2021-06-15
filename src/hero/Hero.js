@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import InitialScreen from "./InitialScreen";
-import NotFound from "./NotFound";
+// import NotFound from "./NotFound";
 import Results from "./results/Results";
 
 const HeroWrapper = styled.div`
