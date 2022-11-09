@@ -1,4 +1,7 @@
-# Movie assignment
+# Movie - Challenge
+
+### ** This is an old project, thus it may not work rn. 
+### ** It will be refactor in the future but for now it acts as evidence of my growing skillset and knowledge in frontend development.
 
 ![movies-assignment](https://user-images.githubusercontent.com/71289091/122177914-5ad85a80-ce86-11eb-82f2-d90c28cc594c.JPG)
 
